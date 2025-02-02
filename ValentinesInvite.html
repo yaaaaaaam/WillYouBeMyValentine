@@ -3,34 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Will You Be My Valentine?</title>
+    <title>Valentine's Invitation</title>
     <style>
-        body {
-            text-align: center;
-            font-family: Arial, sans-serif;
-            background-color: pink;
-        }
-        .container {
-            margin-top: 20%;
-        }
-        button {
-            font-size: 20px;
-            padding: 10px 20px;
-            margin: 10px;
-            cursor: pointer;
-        }
+        body { text-align: center; font-family: Arial, sans-serif; padding: 50px; }
+        button { font-size: 20px; margin: 10px; padding: 10px 20px; cursor: pointer; }
     </style>
-    <script>
-        function handleNoClick() {
-            alert("No is not an option! 😈");
-        }
-    </script>
 </head>
 <body>
-    <div class="container">
-        <h1>Will you be my Valentine? 💖</h1>
-        <button onclick="window.location.href='yes.html'">Yes</button>
-        <button onclick="handleNoClick()">No</button>
-    </div>
+
+    <h1>Will you be my Valentine? ❤️</h1>
+
+    <!-- Yes Button -->
+    <a href="valentinespicture.html"><button>Yes</button></a>
+
+    <!-- No Button -->
+    <button onclick="askAgain()">No</button>
+
+    <script>
+        function askAgain() {
+            alert("No is not an option! 😡");
+            setTimeout(askAgain, 500); // Keeps triggering until they say yes
+        }
+    </script>
+
 </body>
 </html>
